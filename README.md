@@ -3,6 +3,12 @@
 Script which helps to populate the search command within the selected visual
 range. See [search-range](https://neovim.io/doc/user/pattern.html#search-range)
 
+
+https://github.com/Ajnasz/nvim-rfind/assets/38329/22a19eea-76de-4475-b41f-f6ae91ef0526
+
+
+## Setting a keymap
+
 ```lua
 local vfind = require("rfind")
 vim.keymap.set("x", "/", vfind.visual)
