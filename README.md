@@ -12,7 +12,7 @@ https://github.com/Ajnasz/nvim-rfind/assets/38329/22a19eea-76de-4475-b41f-f6ae91
 It turned out the plugin is not needed to search in visual select, just just the [`\%V` atom](https://neovim.io/doc/user/pattern.html#%2F%5C%25V) in the search expression
 
 ```lua
-(vim.keymap.set "x" "/" "<Esc>/\\%V")
+vim.keymap.set("x", "/", "<Esc>/\\%V")
 ```
 ***
 
