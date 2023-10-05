@@ -17,9 +17,9 @@ It turned out the plugin is not needed to search in visual select, just just the
 ***
 
 ```lua
-local vfind = require("rfind")
-vim.keymap.set("x", "/", vfind.visual)
-vim.keymap.set("n", "<F7>", vfind.visual)
+local rfind = require("rfind")
+vim.keymap.set("x", "/", rfind.visual)
+vim.keymap.set("n", "<F7>", rfind.visual)
 ```
 
 Then press `/` in visual mode or `F7` in normal mode to search in the last
@@ -28,10 +28,10 @@ selected section.
 ## Custom command
 
 ```lua
-local rfind = require("rfind")
 vim.api.nvim_create_user_command(
     "RangeFind",
     function(opts)
+        local rfind = require("rfind")
         return rfind.range(opts.fargs[1], opts.fargs[2])
     end,
     {nargs = "*"}
